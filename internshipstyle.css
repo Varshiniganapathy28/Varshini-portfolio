@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #edb1c3, #e0f7fa);
+    color: #333;
+    padding-top: 70px;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:#6a0572;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+  }
+  
+  .navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 700;
+    color:white; /* Coral */
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 23px;
+    font-size: 20px;
+  }
+  
+  .nav-links li a {
+    position: relative;
+    color: white; /* default text color */
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    
+    left: 0;
+    bottom: -4px;
+    transition: width 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #171616;              /* Text turns black */
+    background-color: #ffffff;  /* Background becomes white */
+    border-radius: 5px;         /* Optional: rounded hover effect */
+  }
+  
+  .nav-links li a:hover::after {
+    width: 100%;                /* Underline expands on hover */
+  }
+  
+  
+  /* INTERNSHIP SECTION */
+  .internship-section {
+    padding: 20px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .internship-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #4a148c;
+  }
+  
+  /* TIMELINE */
+  .timeline {
+    position: relative;
+    margin-left: 20px;
+    border-left: 3px solid #6a0572;
+    padding-left: 20px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .timeline-icon {
+    position: absolute;
+    left: -30px;
+    top: 3px;
+    background-color: #6a0572;
+    color: white;
+    font-size: 18px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .timeline-content {
+    background:#d7ccc8;
+    padding: 15px 18px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .timeline-content:hover {
+    transform: translateY(-3px);
+  }
+  
+  .timeline-content h3 {
+    margin: 0 0 5px;
+    font-size: 1rem;
+    color:#6a0572;
+  }
+  
+  .timeline-content .date {
+    font-size: 0.85rem;
+    color: #666;
+    float: right;
+  }
+ 
+  .btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .btn:hover {
+    color: #0056b3;
+  }
+  
+  /* TIMELINE ANIMATION */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .timeline-item {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .timeline-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .timeline-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .timeline-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .timeline-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  
